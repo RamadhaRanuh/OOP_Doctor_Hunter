@@ -16,10 +16,28 @@ public class ManageDoctorController implements Initializable {
 
     @FXML
     private Button backButton;
+    @FXML
+    private Button addButton;
+    @FXML
+    private Button updateButton;
+    @FXML
+    private Button deleteButton;
 
     
     public void handleBackClick() {
     	navigateTo("mainpage.fxml", backButton);
+    }
+    
+    public void handleAddClick() {
+    	navigateTo("addDoctorPage.fxml", addButton);
+    }
+    
+    public void handleUpdateClick() {
+    	navigateTo("updateDoctorPage1.fxml", updateButton);
+    }
+    
+    public void handleDeleteClick() {
+    	navigateTo("deleteDoctorPage.fxml", deleteButton);
     }
     
     @Override

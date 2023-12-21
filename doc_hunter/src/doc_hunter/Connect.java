@@ -2,6 +2,7 @@ package doc_hunter;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -73,5 +74,19 @@ public class Connect {
 						e.printStackTrace();
 					}
 				}
+			
+			public PreparedStatement prepareStatement(String query) throws SQLException {
+			    return con.prepareStatement(query);
+			}
+			
+			
+			public int getUpdateCount() {
+		        try {
+		            return this.st.getUpdateCount();
+		        } catch (SQLException e) {
+		            e.printStackTrace();
+		            return -1;
+		        }
+		    }
 }
 

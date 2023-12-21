@@ -8,14 +8,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f0e6db;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doc_hunter.LoginPage2Controller">
    <children>
-      <Text layoutX="536.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login As" wrappingWidth="215.16259765625">
-         <font>
-            <Font size="52.0" />
-         </font>
-      </Text>
-      <TextField layoutX="475.0" layoutY="400.0" prefHeight="40.0" prefWidth="342.0" promptText="Email / Username" />
-      <TextField layoutX="475.0" layoutY="490.0" prefHeight="40.0" prefWidth="342.0" promptText="Password" />
-      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="43.0" prefWidth="127.0" stylesheets="@doc_hunter.css" text="Back" />
-      <Button fx:id="loginButton" layoutX="475.0" layoutY="577.0" mnemonicParsing="false" onAction="#handleLoginButtonClick" prefHeight="47.0" prefWidth="342.0" style="-fx-background-color: #3d85c6; -fx-text-fill: #eeeeee;" text="Login" />
+      <AnchorPane layoutX="126.0" layoutY="60.0" prefHeight="624.0" prefWidth="1062.0" style="-fx-background-color: #c9bcaf; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+         <children>
+            <Text layoutX="483.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="Arial" size="39.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+<TextField fx:id="emailField" layoutX="475.0" layoutY="300.0" prefHeight="40.0" prefWidth="342.0" promptText="Email / Username" />
+<TextField fx:id="passwordField" layoutX="475.0" layoutY="390.0" prefHeight="40.0" prefWidth="342.0" promptText="Password" />
+      <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="30.0" prefWidth="80.0" stylesheets="@doc_hunter.css" text="Back" />
+      <Button fx:id="loginButton" layoutX="475.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleLoginButtonClick" prefHeight="47.0" prefWidth="342.0" style="-fx-background-color: #3d85c6; -fx-text-fill: #eeeeee;" text="Login" />
    </children>
 </AnchorPane>

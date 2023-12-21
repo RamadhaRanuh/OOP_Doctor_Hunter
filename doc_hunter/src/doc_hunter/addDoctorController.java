@@ -6,45 +6,35 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
-public class MakeAppointmentController implements Initializable {
+public class addDoctorController implements Initializable {
 
     @FXML
-    private Button backButton;
+    private Button backButton, addData;
     @FXML
-    private TextField idAppointmentField, idPatientField, idDoctorField, recipeField, diagnosticResultsField, statusField;
-    @FXML
-    private DatePicker dateAppointmentPicker;
-    @FXML
-    private Button makeAppointmentButton;
+    private TextField idField, usernameField, specializationField, contactNumberField, addressField;
     Connect connect = Connect.getinstance();
 
-    
     public void handleBackClick() {
-    	navigateTo("mainpage.fxml", backButton);
+        navigateTo("managedoctorpage.fxml", backButton);
     }
-    
-    
-    public void handleMakeAppointmentClick() {
-        String idAppointment = idAppointmentField.getText().trim();
-        String idPatient = idPatientField.getText().trim();
-        String idDoctor = idDoctorField.getText().trim();
-        String recipe = recipeField.getText().trim();
-        String status = statusField.getText().trim();
-        String diagnosticResults = diagnosticResultsField.getText().trim();
-        LocalDate dateAppointment = dateAppointmentPicker.getValue();
+
+    public void handleAddDataClick() {
+        String id = idField.getText().trim();
+        String username = usernameField.getText().trim();
+        String specialization = specializationField.getText().trim();
+        String contactNumber = contactNumberField.getText().trim();
+        String address = addressField.getText().trim();
 
         // Validate inputs
-        if (idAppointment.isEmpty() || idPatient.isEmpty() || idDoctor.isEmpty() || recipe.isEmpty() || diagnosticResults.isEmpty() || dateAppointment == null) {
+        if (id.isEmpty() || username.isEmpty() || specialization.isEmpty() || contactNumber.isEmpty() || address.isEmpty()) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error Dialog");
             alert.setHeaderText("Input Error");
@@ -52,11 +42,9 @@ public class MakeAppointmentController implements Initializable {
             alert.showAndWait();
             return;
         }
-        
+
         try {
-            Integer.parseInt(idAppointment);
-            Integer.parseInt(idPatient);
-            Integer.parseInt(idDoctor);
+            Integer.parseInt(id);
         } catch (NumberFormatException e) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error Dialog");
@@ -67,21 +55,21 @@ public class MakeAppointmentController implements Initializable {
         }
 
         try {
-            String query = "INSERT INTO Appointment (ID_Appointment, ID_Pasien, ID_Dokter, Tanggal_Waktu_Janji, Status_Janji, Hasil_Diagnosa, Resep_Obat) VALUES ('"
-                    + idAppointment + "', '" + idPatient + "', '" + idDoctor + "', '" + dateAppointment+ "', '" + status + "', '" + diagnosticResults + "', '" + recipe + "')";
+            String query = "INSERT INTO Dokter (ID_Dokter, Nama_Dokter, Spesialisasi, Nomor_Kontak, Alamat_Praktik) VALUES ('"
+                    + id + "', '" + username + "', '" + specialization + "', '" + contactNumber + "', '" + address + "')";
             connect.executeupdate(query);
-            
+
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.setTitle("Success Dialog");
             alert.setHeaderText(null);
             alert.setContentText("Thank you for input data!");
             alert.showAndWait();
-            navigateTo("mainpage.fxml", makeAppointmentButton);
+            navigateTo("managedoctorpage.fxml", addData);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

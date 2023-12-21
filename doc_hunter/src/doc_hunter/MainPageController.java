@@ -51,7 +51,6 @@ public class MainPageController implements Initializable {
     }
     
     public void handleManageDoctorClick() {
-    	System.out.println(SignupPage1Controller.userType);
         if(LoginPage1Controller.userType.equals("user")) {
             Alert alert = new Alert(AlertType.ERROR);
             alert.setTitle("Error Dialog");

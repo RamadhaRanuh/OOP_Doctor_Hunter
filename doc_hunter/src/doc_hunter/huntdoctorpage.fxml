@@ -10,24 +10,24 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f0e6db;" stylesheets="@doc_hunter.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doc_hunter.HuntDoctorController">
    <children>
-      <Button fx:id="backButton" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="32.0" prefWidth="61.0" stylesheets="@doc_hunter.css" text="Back" />
-      <TableView layoutX="400.0" layoutY="-3.0" prefHeight="722.0" prefWidth="883.0" style="-fx-background-color: #eeeeee;" stylesheets="@doc_hunter.css">
+      <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="30.0" prefWidth="80.0" stylesheets="@doc_hunter.css" text="Back" />
+      <TableView fx:id="tableView" layoutX="-4.0" layoutY="66.0" prefHeight="655.0" prefWidth="1286.0" style="-fx-background-color: #eeeeee;" stylesheets="@doc_hunter.css">
         <columns>
-          <TableColumn prefWidth="128.0" text="Doctor Name" />
-            <TableColumn prefWidth="188.00003051757812" text="Schedule Address" />
-            <TableColumn prefWidth="107.199951171875" text="Specialist" />
-            <TableColumn prefWidth="212.53338623046875" text="Other Information" />
-          <TableColumn minWidth="0.0" prefWidth="244.00004882812505" text="Schedule" />
+            <TableColumn fx:id="idDokterColumn" prefWidth="170.13336181640625" text="Doctor ID" />
+            <TableColumn fx:id="namaDokterColumn" prefWidth="140.0000457763672" text="Doctor Name" />
+            <TableColumn fx:id="spesialisasiColumn" prefWidth="150.933349609375" text="Specialist" />
+            <TableColumn fx:id="nomorHPColumn" prefWidth="382.66656494140625" text="Contact Numbber" />
+            <TableColumn fx:id="alamatColumn" prefWidth="440.00006103515625" text="Practice Address" />
         </columns>
       </TableView>
-      <HBox alignment="CENTER" layoutX="79.0" layoutY="8.0" prefHeight="42.0" prefWidth="289.0">
+      <HBox alignment="CENTER" layoutX="90.0" layoutY="-8.0" prefHeight="66.0" prefWidth="491.0">
          <children>
-            <TextField prefHeight="40.0" prefWidth="219.0" promptText="Type here to search" style="-fx-border-color: #bcbcbc;">
+            <TextField fx:id="searchField" prefHeight="40.0" prefWidth="364.0" promptText="Type here to search">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
             </TextField>
-            <Button alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="89.0" prefWidth="64.0" style="-fx-background-color: #073763; -fx-text-fill: #eeeeee;" text="Search" />
+            <Button mnemonicParsing="false" onAction="#handleSearchClick" prefHeight="40.0" prefWidth="107.0" style="-fx-background-color: #3d85c6; -fx-text-fill: #eeeeee;" text="Search" />
          </children>
       </HBox>
    </children>

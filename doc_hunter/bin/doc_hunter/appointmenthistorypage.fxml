@@ -8,18 +8,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f0e6db;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doc_hunter.AppointmentHistoryController">
    <children>
-      <Button fx:id="backButton" layoutX="8.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="43.0" prefWidth="117.0" stylesheets="@doc_hunter.css" text="Back" />
-      <TableView layoutX="253.0" layoutY="-1.0" prefHeight="720.0" prefWidth="1010.0" style="-fx-border-color: #073763;" stylesheets="@doc_hunter.css">
-        <columns>
-          <TableColumn prefWidth="100.79998779296875" text="Appointment ID" />
-          <TableColumn prefWidth="69.60006713867188" text="Patient ID" />
-            <TableColumn prefWidth="63.466644287109375" text="Doctor ID" />
-            <TableColumn prefWidth="154.933349609375" text="Appointment Date" />
-            <TableColumn prefWidth="68.0" text="Status" />
-            <TableColumn prefWidth="164.26666259765625" text="Results" />
-            <TableColumn prefWidth="386.1334228515625" text="Recipe" />
-        </columns>
-      </TableView>
+      <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="30.0" prefWidth="80.0" stylesheets="@doc_hunter.css" text="Back" />
+     <TableView fx:id="tableView" layoutX="253.0" layoutY="-1.0" prefHeight="720.0" prefWidth="1010.0" style="-fx-border-color: #073763;" stylesheets="@doc_hunter.css">
+    <columns>
+        <TableColumn fx:id="appointmentIdColumn" prefWidth="100.79998779296875" text="Appointment ID" />
+        <TableColumn fx:id="patientIdColumn" prefWidth="69.60006713867188" text="Patient ID" />
+        <TableColumn fx:id="doctorIdColumn" prefWidth="63.466644287109375" text="Doctor ID" />
+        <TableColumn fx:id="appointmentDateColumn" prefWidth="154.933349609375" text="Appointment Date" />
+        <TableColumn fx:id="statusColumn" prefWidth="68.0" text="Status" />
+        <TableColumn fx:id="resultsColumn" prefWidth="164.26666259765625" text="Results" />
+        <TableColumn fx:id="recipeColumn" prefWidth="386.1334228515625" text="Recipe" />
+    </columns>
+</TableView>
       <ScrollBar layoutX="1260.0" orientation="VERTICAL" prefHeight="719.0" prefWidth="21.0" />
    </children>
 </AnchorPane>

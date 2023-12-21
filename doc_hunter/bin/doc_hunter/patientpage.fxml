@@ -8,16 +8,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f0e6db;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doc_hunter.PatientController">
    <children>
-      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="41.0" prefWidth="104.0" stylesheets="@doc_hunter.css" text="Back" />
-      <TableView layoutX="222.0" layoutY="1.0" prefHeight="722.0" prefWidth="1032.0" stylesheets="@doc_hunter.css">
-        <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="338.9332580566406" text="Name" />
-            <TableColumn prefWidth="133.60003662109375" text="DoB" />
-            <TableColumn prefWidth="185.59991455078125" text="Phone Number" />
-            <TableColumn prefWidth="299.20001220703125" text="Address" />
-        </columns>
-      </TableView>
-      <ScrollBar layoutX="1253.0" layoutY="1.0" orientation="VERTICAL" prefHeight="717.0" prefWidth="28.0" />
+      <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="30.0" prefWidth="80.0" stylesheets="@doc_hunter.css" text="Back" />
+      <TableView fx:id="tableView" layoutX="253.0" layoutY="-1.0" prefHeight="720.0" prefWidth="1010.0" stylesheets="@doc_hunter.css">
+    <columns>
+        <TableColumn fx:id="idPasienColumn" prefWidth="88.00004577636719" text="ID" />
+        <TableColumn fx:id="namaPasienColumn" prefWidth="326.39996337890625" text="Name" />
+        <TableColumn fx:id="nomorHPColumn" prefWidth="301.86669921875" text="Phone Number" />
+        <TableColumn fx:id="alamatColumn" prefWidth="291.73333740234375" text="Address" />
+    </columns>
+</TableView>
+      <ScrollBar layoutX="1260.0" orientation="VERTICAL" prefHeight="719.0" prefWidth="21.0" />
    </children>
 </AnchorPane>
