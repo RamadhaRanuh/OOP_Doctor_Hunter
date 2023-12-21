@@ -1,0 +1,27 @@
+
+.AnchorPane {
+    -fx-background-color: black;
+	-fx-font-family: sans-serif;
+}
+
+.table-view {
+    -fx-border-color: #f0e6db;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3d85c6;
+}
+
+.table-view .table-cell {
+    -fx-background-color: #3d85c6;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+#backButton {
+    -fx-background-color: #073763;
+    -fx-text-fill: #eeeeee;
+}
+

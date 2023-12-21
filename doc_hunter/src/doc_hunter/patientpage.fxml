@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #f0e6db;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="doc_hunter.PatientController">
+   <children>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="41.0" prefWidth="104.0" stylesheets="@doc_hunter.css" text="Back" />
+      <TableView layoutX="222.0" layoutY="1.0" prefHeight="722.0" prefWidth="1032.0" stylesheets="@doc_hunter.css">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="338.9332580566406" text="Name" />
+            <TableColumn prefWidth="133.60003662109375" text="DoB" />
+            <TableColumn prefWidth="185.59991455078125" text="Phone Number" />
+            <TableColumn prefWidth="299.20001220703125" text="Address" />
+        </columns>
+      </TableView>
+      <ScrollBar layoutX="1253.0" layoutY="1.0" orientation="VERTICAL" prefHeight="717.0" prefWidth="28.0" />
+   </children>
+</AnchorPane>
