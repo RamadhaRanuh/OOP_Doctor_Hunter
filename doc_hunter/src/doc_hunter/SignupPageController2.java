@@ -33,6 +33,18 @@ public class SignupPageController2 implements Initializable {
     @FXML
     public void handleSignUpButtonClick() {
     	
+    	try {
+    	    Integer.parseInt(idField.getText().trim());
+    	} catch (NumberFormatException e) {
+    	    // Show error alert
+    	    Alert alert = new Alert(AlertType.ERROR);
+    	    alert.setTitle("Error Dialog");
+    	    alert.setHeaderText("Input Error");
+    	    alert.setContentText("ID must be an integer.");
+    	    alert.showAndWait();
+    	    return;
+    	}
+    	
     	
     	 if(idField.getText().trim().isEmpty() ||
     		        usernameField.getText().trim().isEmpty() ||

@@ -55,7 +55,16 @@ public class HuntDoctorController implements Initializable {
     @FXML
     private void handleSearchClick() {
         String doctorId = searchField.getText();
-        populateTable("SELECT * FROM Dokter WHERE ID_Dokter = " + doctorId);
+        String query;
+        if(doctorId == null || doctorId.trim().isEmpty())
+        {
+            query = "SELECT * FROM Dokter";
+        }
+        else
+        {
+            query = "SELECT * FROM Dokter WHERE Nama_Dokter = " + '"' +  doctorId + '"';
+        }
+        populateTable(query);
     }
 
     private void populateTable(String query) {

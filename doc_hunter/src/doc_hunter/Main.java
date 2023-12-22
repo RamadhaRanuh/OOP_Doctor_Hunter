@@ -15,16 +15,6 @@ import javafx.scene.text.Font;
 
 public class Main extends Application {
 	
-	/*
-    static Map<String, Customer> users = new HashMap<>();
-    static Map<String, Customer> admins = new HashMap<>(); 
-    static Map<String, Customer> customers = new HashMap<>(); // Customer data
-    static List<FoodItem> food = new ArrayList<>(); // Food menu
-    static List<DrinkItem> drinks = new ArrayList<>(); // Beverage menu
-    static List<Order> orders = new ArrayList<>();
-	*/
-	
-	
 	
     @Override
     public void start(Stage primaryStage) throws Exception {
