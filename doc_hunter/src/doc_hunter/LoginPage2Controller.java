@@ -32,6 +32,8 @@ public class LoginPage2Controller implements Initializable {
     
     @FXML
     public void handleLoginButtonClick() {
+    	
+    	
         if(emailField.getText().trim().isEmpty() || passwordField.getText().trim().isEmpty()) {
             showAlert("Error", "Please fill in all fields.");
             return;
@@ -39,6 +41,7 @@ public class LoginPage2Controller implements Initializable {
 
         String emailOrName = emailField.getText().trim();
         String password = passwordField.getText().trim();
+       
 
         if (LoginPage1Controller.userType.equals("admin")) {
             try {

@@ -76,10 +76,19 @@ public class ScheduleController implements Initializable {
     
     @FXML
     private void handleSearchClick() {
-    	String scheduleId = searchField.getText();
-        ObservableList<Schedule> data = FXCollections.observableArrayList();
-        String query = "SELECT * FROM Schedule WHERE ID_Jadwal = " + scheduleId;
-        connect.rs = connect.executequery(query);
+    	 String scheduleId = searchField.getText();
+    	    ObservableList<Schedule> data = FXCollections.observableArrayList();
+    	    String query;
+    	    if(scheduleId == null || scheduleId.trim().isEmpty())
+    	    {
+    	        query = "SELECT * FROM Schedule";
+    	    }
+    	    else
+    	    {
+    	        query = "SELECT * FROM Schedule WHERE ID_Jadwal = " + scheduleId;
+    	    }
+    	    connect.rs = connect.executequery(query);
+
         
         try
         {
