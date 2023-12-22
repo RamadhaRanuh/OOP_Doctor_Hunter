@@ -1,9 +1,11 @@
 use doctor_hunter;
-use siaga62;
 
 SELECT * FROM users;
 SELECT * FROM admins;
-
+SELECT * FROM Appointment;
+SELECT * FROM Pasien;
+SELECT * FROM Dokter;
+SELECT * FROM Schedule;
 
 
 CREATE TABLE Dokter (
@@ -30,20 +32,21 @@ CREATE TABLE Appointment (
     Tanggal_Waktu_Janji DATETIME,
     Status_Janji VARCHAR(20),
     Hasil_Diagnosa TEXT,
-    Resep_Obat TEXT,
-    FOREIGN KEY (ID_Pasien) REFERENCES Pasien(ID_Pasien),
-    FOREIGN KEY (ID_Dokter) REFERENCES Dokter(ID_Dokter)
+    Resep_Obat TEXT
 );
 
+
+
 -- Tabel Jadwal_Praktik_Dokter
-CREATE TABLE Jadwal_Praktik_Dokter (
+CREATE TABLE Schedule (
     ID_Jadwal INT PRIMARY KEY,
     ID_Dokter INT,
     Hari_Praktik VARCHAR(20),
     Jam_Mulai_Praktik TIME,
-    Jam_Selesai_Praktik TIME,
-    FOREIGN KEY (ID_Dokter) REFERENCES Dokter(ID_Dokter)
+    Jam_Selesai_Praktik TIME
 );
+
+
 
 use doctor_hunter;
 alter table pasien add email varchar(50);
