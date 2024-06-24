@@ -1,50 +1,57 @@
-# OOP_Doctor_Hunter
+# Doctor Hunter
 
-Selamat datang di Aplikasi "Doctor Hunter"! Aplikasi ini dirancang untuk memudahkan pengguna dalam mencari, "memburu," dan mengelola data dokter, serta membuat janji konsultasi dengan dokter yang diincar. Berikut adalah deskripsi singkat mengenai fitur-fitur utama yang perlu dibuat:
+Welcome to the "Doctor Hunter" application! This app is designed to help users search for, "hunt," and manage doctor data, as well as schedule consultations with their targeted doctors. Below is a brief description of the main features that need to be implemented:
 
-## Fitur-Fitur Utama
+## Table of Contents
 
-### a. Memburu Dokter
-Fitur ini memungkinkan pengguna untuk:
-- Menambahkan dokter baru ke dalam daftar "buruan."
-- Mengedit informasi dokter yang sudah ada di daftar.
-- Menghapus dokter dari daftar "buruan."
+- [Introduction](#introduction)
+- [Features](#features)
+  - [Doctor Hunting](#doctor-hunting)
+  - [Doctor Search and Schedule](#doctor-search-and-schedule)
+  - [Making Appointments](#making-appointments)
+- [How to Use the Application](#how-to-use-the-application)
 
-Penting untuk dicatat bahwa akses ke fitur ini harus terbatas, sehingga hanya pihak yang berwenang (bukan pasien) yang dapat mengelola daftar "buruan" dokter.
+## Introduction
 
-### b. Pencarian dan Jadwal Dokter
-Fitur ini memberikan pengguna kemampuan untuk:
-- Mencari dokter berdasarkan hari, spesialisasi, atau nama.
-- Melihat jadwal dokter untuk memudahkan pemilihan waktu "berburu."
+The "Doctor Hunter" application aims to simplify the process of finding, managing, and scheduling consultations with doctors. Users can add doctors to their "hunt list," search for doctors by various criteria, and make appointments seamlessly.
 
-### c. Membuat Janji
-Fitur ini memungkinkan pengguna untuk:
-- Membuat janji temu konsultasi dengan dokter yang ada di daftar "buruan."
-- Menerima pemberitahuan hasil diagnosa setelah konsultasi.
-- Mendapatkan resep obat sebagai hasil dari "berburu" dokter.
+## Features
 
-## Cara Menggunakan Aplikasi
+### Doctor Hunting
 
-1. **Memburu Dokter**
-   - Masuk ke aplikasi dengan kredensial yang sesuai.
-   - Akses fitur "Memburu Dokter" melalui menu utama.
-   - Tambahkan, edit, atau hapus dokter dari daftar "buruan" sesuai kebutuhan.
+This feature allows authorized users to:
+- Add new doctors to the "hunt list."
+- Edit information of existing doctors on the list.
+- Remove doctors from the "hunt list."
 
-2. **Pencarian dan Jadwal Dokter**
-   - Gunakan fitur pencarian untuk menemukan dokter yang diinginkan.
-   - Lihat jadwal dokter untuk memilih waktu "berburu" yang sesuai.
+Note that access to this feature should be restricted to authorized personnel only (not patients).
 
-3. **Membuat Janji**
-   - Pilih dokter dari daftar "buruan."
-   - Tentukan waktu konsultasi yang tersedia.
-   - Konfirmasi janji temu dan tunggu pemberitahuan hasil diagnosa dan resep obat.
+### Doctor Search and Schedule
 
-## Hak Akses
-Penting untuk memastikan bahwa hak akses diberikan dengan bijak. Pastikan hanya pihak yang berwenang yang dapat mengakses dan mengelola daftar "buruan" dokter.
+This feature provides users with the ability to:
+- Search for doctors by day, specialization, or name.
+- View doctors' schedules to facilitate choosing a convenient "hunting" time.
 
-## Kontribusi
-Jika Anda menemui bug atau memiliki ide untuk meningkatkan aplikasi, kami sangat menghargai kontribusi Anda. Silakan buat *pull request* atau laporkan isu melalui sistem pelacakan yang disediakan.
+### Making Appointments
 
-Terima kasih telah bergabung dengan "Doctor Hunter"! Jika ada pertanyaan atau masukan, jangan ragu untuk menghubungi tim pengembang.
+This feature enables users to:
+- Schedule consultation appointments with doctors on the "hunt list."
+- Receive diagnosis notifications after consultations.
+- Obtain prescription medications as a result of the doctor "hunt."
 
-Selamat berburu dokter! 🌟
+## How to Use the Application
+
+1. **Doctor Hunting**
+   - Log in to the application with appropriate credentials.
+   - Access the "Doctor Hunting" feature through the main menu.
+   - Add, edit, or delete doctors from the "hunt list" as needed.
+
+2. **Doctor Search and Schedule**
+   - Use the search feature to find the desired doctor.
+   - View the doctor's schedule to select a suitable "hunting" time.
+
+3. **Making Appointments**
+   - Select a doctor from the "hunt list."
+   - Choose an available consultation time.
+   - Confirm the appointment and wait for the diagnosis notification and prescription.
+
